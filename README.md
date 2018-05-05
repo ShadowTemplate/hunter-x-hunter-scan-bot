@@ -1,6 +1,6 @@
-# ONE PIECE Scan Bot
+# Hunter × Hunter Scan Bot
 
-A Telegram bot to receive notifications when new Hunter x Hunter chapters are 
+A Telegram bot to receive notifications when new Hunter × Hunter chapters are 
 available. This bot periodically checks if new Italian chapters are released on 
 [MangaEden](https://www.mangaeden.com/it/) and [Juin Jutsu Team Forum](
 http://juinjutsuteam.forumcommunity.net/). It is designed to be deployed on 
