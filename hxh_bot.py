@@ -1,10 +1,11 @@
+from extractors import teams
 from google.appengine.api import namespace_manager
+
 import google.appengine.ext.ndb as ndb
 import logging as log
-import time
-from extractors import teams
 import secrets
 import telegram
+import time
 
 releases_to_check = ['Hunter x Hunter']
 
@@ -22,7 +23,8 @@ def check_releases():
             for release in filter(lambda x: is_monitored(x), team.fetch_f()):
                 send_notification_if_needed(team, release)
         except Exception:
-            log.warning("Unable to fetch releases from " + team.name + ". Going to skip it.")
+            log.warning("Unable to fetch releases from " + team.name +
+                        ". Going to skip it.")
 
 
 def send_notification_if_needed(team, release):
@@ -33,8 +35,10 @@ def send_notification_if_needed(team, release):
         if not item:
             try:
                 op_bot = telegram.Bot(token=secrets.op_bot_token)
-                message = "Hey, cacciatori! Nuovo capitolo disponibile!\n" + team.name + ": " + release + "\n\nBuona lettura!"
-                op_bot.sendMessage(chat_id=secrets.telegram_chat_id, text=message)
+                message = "Hey, cacciatori! Nuovo capitolo disponibile!\n" + \
+                          team.name + ": " + release + "\n\nBuona lettura!"
+                op_bot.sendMessage(chat_id=secrets.telegram_chat_id,
+                                   text=message)
                 Release(id=release, name=release).put()
             except Exception as e:
                 log.warning("Unable to send Telegram notification.")
