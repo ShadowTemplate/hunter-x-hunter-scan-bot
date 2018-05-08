@@ -38,7 +38,7 @@ Clone the repository and install the required Python dependencies:
 
 ```
 $ git clone https://github.com/ShadowTemplate/hunter-x-hunter-scan-bot.git
-$ cd hunter-x-hunter-scan-bot
+$ cd hunter-x-hunter-scan-bot/
 $ pip install --user -r requirements.txt
 ```
 
