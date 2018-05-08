@@ -34,10 +34,10 @@ def send_notification_if_needed(team, release):
         item = ndb.Key('Release', release).get()
         if not item:
             try:
-                op_bot = telegram.Bot(token=secrets.op_bot_token)
+                hxh_bot = telegram.Bot(token=secrets.hxh_bot_token)
                 message = "Hey, cacciatori! Nuovo capitolo disponibile!\n" + \
                           team.name + ": " + release + "\n\nBuona lettura!"
-                op_bot.sendMessage(chat_id=secrets.telegram_chat_id,
+                hxh_bot.sendMessage(chat_id=secrets.telegram_chat_id,
                                    text=message)
                 Release(id=release, name=release).put()
             except Exception as e:

@@ -28,7 +28,7 @@ Engine project and reuse it. Please create a *secrets.py* file and set these
 two values:
 
 ```
-op_bot_token = "your_telegram_bot_token"
+hxh_bot_token = "your_telegram_bot_token"
 telegram_chat_id = "your_telegram_chat_id"
 ```
 

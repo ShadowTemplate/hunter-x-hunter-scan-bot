@@ -1,5 +1,5 @@
 application: hunter-x-hunter-scan-bot
-version: 1-2
+version: 1-3
 runtime: python27
 api_version: 1
 threadsafe: yes
