@@ -16,7 +16,7 @@ http://juinjutsuteam.forumcommunity.net/). It is designed to be deployed on
 
 **Development year(s)**: `2016+`
 
-**Authors**: [ShadowTemplate](https://github.com/ShadowTemplate)
+**Author(s)**: [ShadowTemplate](https://github.com/ShadowTemplate)
 
 **Notes**: *For personal use.*
 
